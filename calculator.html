@@ -1,0 +1,105 @@
+<html>
+
+    <title>
+        CALCUATOR
+        </title>
+        <body>
+          
+                
+           <input type="text" id="screen" placeholder="enter data here" >
+
+        </input>
+        
+      <table border="1">
+
+        <tr>
+        <td><button id = "but" onclick="display('+')">
+            +
+            </button></td>
+        
+           <td><button id = "but" onclick="display('-')">
+                -
+            </button></td>
+           <td><button id = "but" onclick="display('*')">*
+            </button></td>
+          <td><button id = "but" onclick="display('/')">/
+            </button></td>
+        </tr>
+        <tr>
+           <td> <button id = "but" onclick="display('1')">1
+            </button></td>
+           <td> <button id = "but" onclick="display('2')">2
+            </button></td>
+           <td> <button id = "but" onclick="display('3')">3
+            </button></td>
+          <td>  <button id = "but" onclick="display('4')">4
+            </button></td>
+            </tr> 
+            <tr>
+           <td> <button id = "but" onclick="display('5')">5
+            </button>
+            </td>
+          <td>  <button id = "but" onclick="display('6')">6
+            </button></td>
+           <td> <button id = "but" onclick="display('7')">7
+            </button></td>
+           <td> <button id = "but" onclick="display('8')">8
+            </button></td>
+            </tr>
+            <tr>
+          <td>  <button id = "but" onclick="display('9')">9
+            </button></td>
+          <td>  <button id = "but" onclick="display('9')">0
+            </button></td>
+         <td>   <button id = "but" onclick="solve()">=
+            </button></td>
+            <td>   <button id = "but" onclick="clr()">clr
+            </button></td>
+        </tr>
+    </table>
+            </body>
+
+
+    </html>
+    <script>
+        function display(val){
+            document.getElementById("screen").value+=val;
+        }
+        function solve(){
+            
+        let y = document.getElementById("screen").value;
+        let x = eval(y);
+        document.getElementById("screen").value=x;
+        }
+        function clr(){
+            document.getElementById("screen").value="";
+        }
+
+    </script>
+    <style>
+        #screen{
+        height: 60px;;
+width: 500px;
+font-size: large;
+        }
+        #but:hover{
+            background-color: aquamarine;
+           
+            transform: rotate(360deg);
+        }
+        #but{
+            transition: transform 1s ease-in-out;
+            background-color: aqua;
+            width : 60px;
+            height: 60px;
+            border-radius: 40%;
+            font-size: large;
+            font-family: fantasy;
+        }
+        body{
+
+            background-color: blue;
+
+        }
+
+        </style>
